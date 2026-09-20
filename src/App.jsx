@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -12,16 +12,9 @@ import Elections from './pages/Elections';
 import Events from './pages/Events';
 import EventDetail from './pages/EventDetail';
 
-// GitHub Pages URLs are case-insensitive, but React Router's basename is strictly case-sensitive.
-// This dynamically matches the casing of the URL so the app doesn't crash on a white screen!
-const basePath = '/DGCaprica';
-const dynamicBasename = window.location.pathname.toLowerCase().startsWith(basePath.toLowerCase())
-  ? window.location.pathname.substring(0, basePath.length)
-  : basePath;
-
 function App() {
   return (
-    <Router basename={dynamicBasename}>
+    <Router>
       <ScrollToTop />
       <div className="app-wrapper">
         <Navbar />
