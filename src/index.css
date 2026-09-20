@@ -240,6 +240,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 100%;
+  padding: 0 4vw;
 }
 
 .navbar-logo {
@@ -255,7 +257,7 @@ p {
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 3rem; /* Airy spacing */
+  gap: 5rem; /* Airy spacing */
 }
 
 .navbar-links a {

@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { DUMMY_EVENTS } from './Events';
+import { DUMMY_EVENTS } from '../data/events';
 
 export default function EventDetail() {
   const { id } = useParams();
@@ -9,7 +9,7 @@ export default function EventDetail() {
     return (
       <div className="container section text-center">
         <h2>Event not found</h2>
-        <Link to="/events" className="btn btn-primary">Back to Events</Link>
+        <Link to="/" className="btn btn-primary">Back to Home</Link>
       </div>
     );
   }
@@ -48,8 +48,8 @@ export default function EventDetail() {
           </div>
           
           <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-            <Link to="/events" style={{ color: 'var(--color-green)', fontWeight: '600', textDecoration: 'underline' }}>
-              ← Back to all events
+            <Link to="/" style={{ color: 'var(--color-green)', fontWeight: '600', textDecoration: 'underline' }}>
+              Return to Homepage
             </Link>
           </div>
         </div>

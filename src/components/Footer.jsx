@@ -30,7 +30,7 @@ export default function Footer() {
               <li><Link to="/about">About Us</Link></li>
               <li><Link to="/platform">Platform</Link></li>
               <li><Link to="/elections">Elections 2068</Link></li>
-              <li><Link to="/events">Events</Link></li>
+
               <li><Link to="/members">Members</Link></li>
             </ul>
           </div>

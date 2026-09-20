@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import dglLogo from '../assets/GreenLabor_Logo.png';
 import dgcFullLogo from '../assets/DGClogomark.png';
 import alpFullLogo from '../assets/Altenative_ALP_Logo.png';
-import { DUMMY_EVENTS } from './Events';
+import { DUMMY_EVENTS } from '../data/events';
 
 export default function Home() {
   const words = [
@@ -198,7 +198,7 @@ export default function Home() {
 
 
       <section className="section section-light">
-        <div className="container">
+        <div className="container" style={{ maxWidth: '1100px' }}>
           <div className="text-center" style={{ marginBottom: '6rem' }}>
             <h2 style={{ fontSize: '5rem', color: 'var(--color-text)' }}>On the Ground</h2>
             <p style={{ fontSize: '1.5rem', color: 'var(--color-text-muted)' }}>See what Green Labor has been doing in communities across Caprica.</p>
@@ -209,17 +209,14 @@ export default function Home() {
                 <p style={{ color: event.color === 'var(--color-pure-white)' ? 'rgba(255,255,255,0.6)' : event.color, fontWeight: '700', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '1rem' }}>
                   {event.date} • {event.location}
                 </p>
-                <h3 style={{ fontSize: '1.8rem', marginBottom: '1rem' }}>{event.title}</h3>
-                <p style={{ flexGrow: 1, color: 'rgba(255,255,255,0.8)' }}>{event.summary}</p>
+                <h3 style={{ fontSize: '1.8rem', marginBottom: 'auto' }}>{event.title}</h3>
                 <Link to={`/events/${event.id}`} className="btn btn-secondary" style={{ marginTop: '2rem', width: '100%' }}>
-                  Read More
+                  RSVP
                 </Link>
               </div>
             ))}
           </div>
-          <div className="text-center" style={{ marginTop: '4rem' }}>
-            <Link to="/events" className="btn btn-primary">View All Events</Link>
-          </div>
+
         </div>
       </section>
 

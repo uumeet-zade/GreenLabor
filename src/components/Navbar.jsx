@@ -17,7 +17,7 @@ export default function Navbar() {
         <ul className="navbar-links">
           <li><Link to="/about" onClick={scrollToTop} style={{ color: location.pathname === '/about' ? 'var(--color-pure-white)' : '' }}>About</Link></li>
           <li><Link to="/platform" onClick={scrollToTop} style={{ color: location.pathname === '/platform' ? 'var(--color-pure-white)' : '' }}>Platform</Link></li>
-          <li><Link to="/events" onClick={scrollToTop} style={{ color: location.pathname.startsWith('/events') ? 'var(--color-pure-white)' : '' }}>Events</Link></li>
+
           <li><Link to="/elections" onClick={scrollToTop} style={{ color: location.pathname === '/elections' ? 'var(--color-pure-white)' : '' }}>Elections 2068</Link></li>
         </ul>
       </div>

@@ -9,7 +9,7 @@ import Members from './pages/Members';
 import Join from './pages/Join';
 import Donate from './pages/Donate';
 import Elections from './pages/Elections';
-import Events from './pages/Events';
+
 import EventDetail from './pages/EventDetail';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
             <Route path="/join" element={<Join />} />
             <Route path="/donate" element={<Donate />} />
             <Route path="/elections" element={<Elections />} />
-            <Route path="/events" element={<Events />} />
+
             <Route path="/events/:id" element={<EventDetail />} />
           </Routes>
         </main>

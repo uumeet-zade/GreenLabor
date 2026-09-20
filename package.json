@@ -1,6 +1,7 @@
 {
   "name": "dgcaprica",
   "private": true,
+  "homepage": "https://uumeet-zade.github.io/GreenLabor",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

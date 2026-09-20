@@ -7,7 +7,7 @@ cd dist
 git init
 git add .
 git commit -m "Manual Deploy"
-git push -f https://github.com/uumeet-zade/DGCaprica.git HEAD:gh-pages
+git push -f https://github.com/uumeet-zade/GreenLabor.git HEAD:gh-pages
 cd ..
 
 echo "Deployment Complete!"
