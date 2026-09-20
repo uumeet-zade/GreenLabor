@@ -3,7 +3,7 @@ export default function Platform() {
     <div>
       <header className="page-header">
         <div className="container">
-          <h1>Our Platform</h1>
+          <h1 className="text-gradient-gl">Our Platform</h1>
         </div>
       </header>
 
@@ -16,15 +16,15 @@ export default function Platform() {
           </div>
           <div className="grid grid-3">
             <div className="card card-dark">
-              <h3 style={{ color: 'var(--color-yellow)' }}>Governance-Wide Sustainability</h3>
+              <h3 style={{ color: 'var(--color-pure-white)' }}>Governance-Wide Sustainability</h3>
               <p>Sustainability must extend beyond environmental policy into fiscal, infrastructure, and social policy as a fundamental duty of the state.</p>
             </div>
-            <div className="card card-dark">
-              <h3 style={{ color: 'var(--color-yellow)' }}>Empathetic Governance</h3>
-              <p>Policy must be grounded in empirical data, evidence, and the lived experiences of Caprican communities across all regions.</p>
+            <div className="card card-alp">
+              <h3 style={{ color: 'var(--color-pure-white)' }}>Pro-Labor Governance</h3>
+              <p>Policy must be grounded in the lived experiences of Caprican workers. We fight for unyielding union protections, fair wages, and corporate accountability.</p>
             </div>
             <div className="card card-dark">
-              <h3 style={{ color: 'var(--color-yellow)' }}>Land as a Birthright</h3>
+              <h3 style={{ color: 'var(--color-pure-white)' }}>Land as a Birthright</h3>
               <p>Eco-friendly development and reduced inequality driven by a Land Value Tax and similar taxes on harmful activity and speculation.</p>
             </div>
           </div>
@@ -36,20 +36,20 @@ export default function Platform() {
         <div className="container">
           <div className="text-center" style={{ marginBottom: '4rem' }}>
             <h2 style={{ fontSize: '3rem', color: 'var(--color-white)' }}>Economic & Social Vision</h2>
-            <p style={{ fontSize: '1.25rem', color: 'var(--color-yellow)' }}>Building a fairer, greener future for all Capricans.</p>
+            <p style={{ fontSize: '1.25rem', color: 'var(--color-pure-white)' }}>Building a fairer, greener future for all Capricans.</p>
           </div>
           <div className="grid grid-3">
-            <div className="card" style={{ backgroundColor: 'var(--color-pure-white)' }}>
+            <div className="card card-neutral">
               <h3 style={{ color: 'var(--color-green)' }}>Green-Liberal Economics</h3>
-              <p style={{ color: 'var(--color-text-muted)' }}>Market mechanisms alongside composed fiscal and monetary policy, directed toward environmental and economic stewardship.</p>
+              <p>Market mechanisms alongside composed fiscal and monetary policy, directed toward environmental and economic stewardship.</p>
             </div>
-            <div className="card" style={{ backgroundColor: 'var(--color-pure-white)' }}>
-              <h3 style={{ color: 'var(--color-green)' }}>Civil & Human Rights</h3>
-              <p style={{ color: 'var(--color-text-muted)' }}>Uncompromising dedication to education, universal healthcare, feminism, and sweeping social justice reform.</p>
+            <div className="card card-neutral">
+              <h3 style={{ color: 'var(--color-red)' }}>Civil & Labor Rights</h3>
+              <p>Uncompromising dedication to union empowerment, universal healthcare, feminism, and sweeping social justice reform.</p>
             </div>
-            <div className="card" style={{ backgroundColor: 'var(--color-pure-white)' }}>
-              <h3 style={{ color: 'var(--color-green)' }}>Political Renewal</h3>
-              <p style={{ color: 'var(--color-text-muted)' }}>A definitive corrective to the ailing Caprican political environment that currently fails to reflect the character of the people it governs.</p>
+            <div className="card card-neutral">
+              <h3 style={{ color: 'var(--color-pure-white)' }}>Political Renewal</h3>
+              <p>A definitive corrective to the ailing Caprican political environment that currently fails to reflect the character of the people it governs.</p>
             </div>
           </div>
         </div>

@@ -1,14 +1,12 @@
 :root {
-  --color-green: #04743c;
-  --color-yellow: #fbc304;
-  --color-teal-dark: #57a37e;
-  --color-teal-light: #7cb79c;
-  --color-white: #f8faf8;
+  --color-green: #0d8f3d;
+  --color-red: #BF2519;
+  --color-white: #ffffff;
   --color-pure-white: #ffffff;
-  --color-text: #08060d;
-  --color-text-muted: #4a4a4a;
+  --color-text: #000000;
+  --color-text-muted: #333333;
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  --border-subtle: 1px solid rgba(8, 6, 13, 0.1);
+  --border-subtle: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -81,23 +79,36 @@ p {
 }
 
 .btn-primary {
-  background-color: var(--color-green);
+  background-color: #000000;
   color: var(--color-pure-white);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-teal-dark);
+  background-color: var(--color-pure-white);
+  color: #000000;
+  box-shadow: 0 0 15px var(--color-green), 0 0 15px var(--color-red);
+  border-color: var(--color-pure-white);
+}
+
+.btn-alp {
+  background-color: var(--color-red);
+  color: var(--color-pure-white);
+}
+
+.btn-alp:hover {
+  background-color: #a01d14;
   color: var(--color-pure-white);
 }
 
 .btn-secondary {
-  background-color: var(--color-yellow);
+  background-color: var(--color-pure-white);
   color: var(--color-text);
 }
 
 .btn-secondary:hover {
-  background-color: #e5b002;
-  color: var(--color-text);
+  background-color: var(--color-green);
+  color: var(--color-pure-white);
 }
 
 .btn-outline {
@@ -121,7 +132,7 @@ p {
 }
 
 .section-dark {
-  background-color: var(--color-green);
+  background-color: #000000;
   color: var(--color-pure-white);
 }
 
@@ -129,8 +140,17 @@ p {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.section-alp {
+  background-color: var(--color-red);
+  color: var(--color-pure-white);
+}
+
+.section-alp p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .section-yellow {
-  background-color: var(--color-yellow);
+  background-color: var(--color-pure-white);
   color: var(--color-text);
 }
 
@@ -146,7 +166,7 @@ p {
 .grid {
   display: grid;
   gap: 2px; /* Very subtle grid gaps showing background through */
-  background-color: rgba(8, 6, 13, 0.05); /* Divider color */
+  background-color: rgba(0, 0, 0, 0.05); /* Divider color */
 }
 
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
@@ -164,7 +184,7 @@ p {
 }
 
 .card-dark {
-  background: var(--color-green);
+  background: #000000;
   color: var(--color-pure-white);
 }
 
@@ -176,9 +196,37 @@ p {
   transform: translateY(-8px);
 }
 
+.card-neutral {
+  background: #000000;
+  color: var(--color-pure-white);
+  border-top: 3px solid var(--color-green);
+  border-bottom: 3px solid var(--color-red);
+}
+
+.card-neutral p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-neutral:hover {
+  transform: translateY(-8px);
+}
+
+.card-alp {
+  background: var(--color-red);
+  color: var(--color-pure-white);
+}
+
+.card-alp p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card-alp:hover {
+  transform: translateY(-8px);
+}
+
 /* Navbar Sleek */
 .navbar {
-  background-color: rgba(8, 6, 13, 0.75); /* Dark text color frosted glass */
+  background-color: rgba(0, 0, 0, 0.75); /* Dark text color frosted glass */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: sticky;
@@ -218,13 +266,13 @@ p {
 }
 
 .navbar-links a:not(.btn-nav):hover {
-  color: var(--color-yellow);
+  color: var(--color-pure-white);
 }
 
 .navbar-links .btn-nav {
   padding: 0.75rem 2rem;
   font-size: 1rem;
-  background-color: var(--color-yellow);
+  background-color: var(--color-pure-white);
   color: var(--color-text);
 }
 
@@ -287,5 +335,44 @@ p {
 }
 
 .hero p {
-  color: var(--color-teal-light);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.text-gradient-gl {
+  background: linear-gradient(90deg, var(--color-green) 0%, var(--color-red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Page Header (Global Premium Style) */
+.page-header {
+  padding: 8.5rem 0 6rem;
+  background-color: var(--color-black);
+}
+
+.page-header h1 {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-pure-white);
+}
+
+.page-header p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Premium Inputs */
+input, select, textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-green) !important;
+  box-shadow: 0 0 15px rgba(13, 143, 61, 0.4);
 }

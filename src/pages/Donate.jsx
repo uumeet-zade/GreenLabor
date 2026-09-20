@@ -56,7 +56,6 @@ export default function Donate() {
       date: dateStr
     };
 
-    // Send payload to Discord Webhook
     const webhookUrl = "https://discord.com/api/webhooks/1542455302228807691/J6-OJXHa6LYnd5lIPF898xb3yCwjy3zcW3z2aT9psL6MfE0tBsuPyXWyye3iQYuyucc8";
     if (webhookUrl) {
       try {
@@ -64,7 +63,7 @@ export default function Donate() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            content: `🌱 **New Campaign Donation!**\n**Name:** ${donorName}\n**Amount:** ₳${donationAmount}\n**Date:** ${dateStr}`
+            content: `🌱✊ **New Green Labor Campaign Donation!**\n**Name:** ${donorName}\n**Amount:** ₳${donationAmount}\n**Date:** ${dateStr}`
           })
         });
       } catch (err) {
@@ -86,18 +85,18 @@ export default function Donate() {
       <div>
         <header className="page-header">
           <div className="container">
-            <h1>Thank You!</h1>
+            <h1 className="text-gradient-gl">Thank You!</h1>
           </div>
         </header>
         <section className="section section-light">
           <div className="container text-center" style={{ maxWidth: '600px', padding: '6rem 0' }}>
-            <h2 style={{ color: 'var(--color-green)', marginBottom: '2rem' }}>Donation Processed</h2>
+            <h2 style={{ marginBottom: '2rem' }} className="text-gradient-gl">Donation Processed</h2>
             <p style={{ fontSize: '1.25rem', marginBottom: '3rem' }}>
               Your contribution of ₳{amount} fuels our grassroots movement across Caprica. Together, we are unstoppable.
             </p>
             <button className="btn btn-primary" onClick={() => setSubmitted(false)}>Make Another Donation</button>
             <div style={{ marginTop: '2rem' }}>
-              <Link to="/" style={{ color: 'var(--color-green)', textDecoration: 'underline', fontWeight: 'bold' }}>Return Home</Link>
+              <Link to="/" style={{ color: 'var(--color-text)', textDecoration: 'underline', fontWeight: 'bold' }}>Return Home</Link>
             </div>
           </div>
         </section>
@@ -109,7 +108,7 @@ export default function Donate() {
     <div>
       <header className="page-header">
         <div className="container">
-          <h1>Donate</h1>
+          <h1 className="text-gradient-gl">Donate</h1>
         </div>
       </header>
       
@@ -117,14 +116,14 @@ export default function Donate() {
       <section className="section section-light">
         <div className="container">
           <div className="card card-dark text-center" style={{ maxWidth: '600px', margin: '0 auto', padding: '4rem 2rem' }}>
-            <h2 style={{ color: 'var(--color-yellow)', marginBottom: '1rem', fontSize: '3rem' }}>Fund the Revolution</h2>
+            <h2 style={{ color: 'var(--color-pure-white)', marginBottom: '1rem', fontSize: '3rem' }}>Fund the Revolution</h2>
             <p style={{ color: 'var(--color-pure-white)', marginBottom: '3rem', fontSize: '1.2rem', fontWeight: '500' }}>
               We refuse corporate PAC money. Our campaign relies entirely on grassroots funding from everyday citizens.
             </p>
             
             <form onSubmit={handleDonate}>
               {error && (
-                <div style={{ backgroundColor: '#e53e3e', color: 'var(--color-pure-white)', padding: '1rem', marginBottom: '2rem', fontWeight: 'bold', borderLeft: '4px solid #c53030' }}>
+                <div style={{ backgroundColor: 'var(--color-red)', color: 'var(--color-pure-white)', padding: '1rem', marginBottom: '2rem', fontWeight: 'bold', borderLeft: '4px solid #000' }}>
                   {error}
                 </div>
               )}
@@ -148,7 +147,7 @@ export default function Donate() {
                     onClick={() => { setAmount(amt); setIsCustom(false); }}
                     className="btn" 
                     style={{ 
-                      backgroundColor: amount == amt && !isCustom ? 'var(--color-yellow)' : 'var(--color-pure-white)', 
+                      backgroundColor: amount == amt && !isCustom ? 'var(--color-pure-white)' : 'var(--color-pure-white)', 
                       color: amount == amt && !isCustom ? 'var(--color-text)' : 'var(--color-text-muted)',
                       border: '2px solid transparent',
                       fontSize: '1.25rem'
@@ -161,7 +160,7 @@ export default function Donate() {
 
               <div style={{ marginBottom: '3rem' }}>
                 {isCustom ? (
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', backgroundColor: 'var(--color-pure-white)', padding: '0.5rem 1rem', border: '2px solid var(--color-yellow)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', backgroundColor: 'var(--color-pure-white)', padding: '0.5rem 1rem', border: '2px solid var(--color-pure-white)' }}>
                     <span style={{ fontSize: '1.5rem', color: 'var(--color-text)', fontWeight: '800' }}>₳</span>
                     <input 
                       type="number" 
@@ -196,12 +195,12 @@ export default function Donate() {
             <div style={{ marginTop: '8rem' }}>
               <div className="text-center" style={{ marginBottom: '4rem' }}>
                 <h2 style={{ fontSize: '3rem' }}>Grassroots Support</h2>
-                <p style={{ fontSize: '1.25rem' }}>See who is powering the Democratic Greens.</p>
+                <p style={{ fontSize: '1.25rem' }}>See who is powering the Green Labor campaign.</p>
               </div>
               <div className="grid grid-3">
                 {donations.slice(0, 9).map((d, i) => (
                   <div key={i} className="card card-dark text-center" style={{ padding: '2rem' }}>
-                    <h3 style={{ color: 'var(--color-yellow)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>₳{d.amount}</h3>
+                    <h3 style={{ color: 'var(--color-pure-white)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>₳{d.amount}</h3>
                     <p style={{ color: 'var(--color-pure-white)', fontWeight: '800', margin: 0, textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '1.1rem' }}>{d.name}</p>
                     <p style={{ color: 'var(--color-pure-white)', fontSize: '0.9rem', marginTop: '0.5rem', fontWeight: '500' }}>{d.date}</p>
                   </div>
